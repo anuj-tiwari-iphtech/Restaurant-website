@@ -1,0 +1,93 @@
+.homepage-hero{
+    max-width: 1990px;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heropage-hero-img{
+    width: 100%;
+    position: relative;
+}
+
+.hero-main-img{
+    width: 100%;
+    max-height: 795px;
+}
+
+.hero-card{
+    padding: 20px;
+    position: absolute;
+    left: 10%;
+    width: 442px;
+    height: 413px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-card h1{
+    font-family: Catamaran; 
+    font-size: 48px; 
+    line-height: 68px;
+    margin-top: 15px;
+}
+
+.card-down-section{
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.card-down-section p{
+    font-size: 18px;
+    font-weight: 400;
+    color: #323842FF;
+    margin-bottom: 30px;
+}
+
+.card-down-section button{
+    padding: 10px 40px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    background: #F96540FF;
+    border: none;
+    border-radius: 26px;
+}
+
+.description-container{
+    width: 100%;
+    padding: 30px 40px;
+    height: 400px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description h1{
+    font-family: 'Catamaran';
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 68px;
+    color: #171A1FFF;
+    margin-bottom: 20px;
+}
+
+.description p{
+    font-family: Nunito;
+    max-width: 550px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #171A1FFF;
+    text-align: center;
+}

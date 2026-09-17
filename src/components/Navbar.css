@@ -1,0 +1,57 @@
+.navbar-section{
+    width: 100%;
+    padding : 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid  #171a1f1F;
+}
+
+.navbar-logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar-logo-img{
+    width: 48px;
+    height: 48px;
+}
+
+.navbar-logo h1{
+    font-size: 18px;
+    font-family: Catamaran;
+    font-weight: 800;
+    color: #171A1FFF;
+}
+
+.menu-element{
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Nunito; 
+}
+
+.menu-element a{
+    text-decoration: none;
+    color: #000000FF;
+}
+
+.button-group{
+    display: flex;
+    gap: 10px;
+}
+
+.button-group button{
+    padding: 10px 10px;
+    border-radius: 20px;
+    color: #000;
+    background: #fff;
+    border: none;
+}
+
+.button-group button.active{
+    background-color: #323842FF;
+    color: #fff
+}
