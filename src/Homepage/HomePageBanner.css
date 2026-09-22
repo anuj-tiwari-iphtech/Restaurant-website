@@ -1,0 +1,19 @@
+.home-banner-container{
+    padding: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.home-page-banner{
+    max-width: 1990px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 576px) {
+    .home-banner-container{
+        padding: 20px;
+    }
+}
