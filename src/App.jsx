@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import Menu from './pages/Menu'
 import OurStory from './pages/OurStory'
@@ -19,6 +20,7 @@ function App() {
         <Route path='/location' element={<Location/>}/>
         <Route path='/gift-card' element={<GiftCard/>}/>
       </Routes>
+    <Footer/>
     </>
   )
 }

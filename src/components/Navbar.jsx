@@ -18,10 +18,10 @@ export default function Navbar() {
 
   return (
     <nav className='navbar-section'>
-      <div className='navbar-logo'>
+      <Link to='./' className='navbar-logo'>
         <img src={img} alt='logo' className='navbar-logo-img'/>
         <h1>POKE NOW.</h1>
-      </div>
+      </Link>
 
       <button 
         className={`hamburger-menu ${isMenuOpen ? 'open' : ''}`} 

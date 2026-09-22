@@ -4,7 +4,6 @@ import img from '../assets/Homepage/hero.jpg'
 export default function Hero() {
   return (
     <div className='homepage-hero'>
-      {/* Hero Image & Card Wrapper */}
       <div className='heropage-hero-wrapper'>
         <div className='heropage-hero-img'>
           <img src={img} alt='hero-img' className='hero-main-img' />
@@ -20,7 +19,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Description Section */}
       <div className='description-container'>
         <div className='description'>
           <h1>What's poke</h1>
