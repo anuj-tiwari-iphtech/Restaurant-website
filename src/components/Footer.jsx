@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaTwitter, FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import logo from '../assets/footer.svg'; 
 
@@ -15,10 +16,10 @@ export default function Footer() {
           </div>
 
           <nav className="footer-nav">
-            <a href="#menu">Menu</a>
-            <a href="#our-story">Our story</a>
-            <a href="#location">Location</a>
-            <a href="#gift-card">Gift card</a>
+            <Link to='/menu'>Menu</Link>
+            <Link to='/our-story'>Our story</Link>
+            <Link to='/location'>Location</Link>
+            <Link to='/gift-card'>Gift card</Link>
           </nav>
 
           <div className="footer-copyright">
@@ -26,7 +27,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Right Side: CTAs, Address & Email, Social Media Icons */}
         <div className="footer-right">
           <div className="footer-btn-group">
             <button className="btn btn-outline">Order Online</button>
