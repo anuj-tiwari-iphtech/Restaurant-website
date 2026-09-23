@@ -1,5 +1,9 @@
+import GiftCardSection from "../Checkouts/GiftCardSection";
+
 export default function GiftCard() {
   return (
-    <div>GiftCard</div>
+    <>
+      <GiftCardSection/>   
+    </>
   )
 }

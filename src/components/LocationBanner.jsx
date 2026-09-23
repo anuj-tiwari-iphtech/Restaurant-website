@@ -1,8 +1,14 @@
+import { useNavigate } from 'react-router-dom'
 import Bigimg from '../assets/Homepage/locartion/BigOne.jpg'
 import SmallOne from '../assets/Homepage/locartion/smallOne.jpg'
 import './LocationBanner.css'
 
 export default function LocationBanner() {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate('/location')
+  }
   return (
     <div className='banner-container'>
         <div className='banner-left'>
@@ -11,7 +17,7 @@ export default function LocationBanner() {
             Serving fresh fish daily at Boston Harbor Islands, Boylston St, Congress St, Kendall Square, Cambridge St, Haviland St. 
             </p>
 
-            <button>Location & Hours</button>
+            <button onClick={handleClick}>Location & Hours</button>
         </div>
         <div className='banner-right'>
             <img src={Bigimg} alt='BigOne' className='big-img'/>
