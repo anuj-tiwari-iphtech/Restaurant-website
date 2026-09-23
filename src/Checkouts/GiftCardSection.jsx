@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaUser, FaUsers } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import './GiftCardSection.css';
 
 import food1 from '../assets/GiftCard/img1.jpg';
@@ -16,6 +17,8 @@ import food11 from '../assets/GiftCard/img11.jpg';
 import food12 from '../assets/GiftCard/img12.jpg';
 
 export default function GiftCardSection() {
+    const navigate = useNavigate();
+
   const [giftType, setGiftType] = useState('individual'); 
   const [selectedAmount, setSelectedAmount] = useState('25.00');
   const [customAmount, setCustomAmount] = useState('');
@@ -50,6 +53,7 @@ export default function GiftCardSection() {
     };
     console.log('Checkout Data:', checkoutData);
     alert(`Proceeding to checkout for $${finalAmount}`);
+    navigate('/select-restaurant')
   };
 
   return (
@@ -206,7 +210,6 @@ export default function GiftCardSection() {
 
             <div className="gift-gallery-container">
                 <div className="gc-gallery-cols-wrapper">
-                    {/* Column 1 */}
                     <div className="gc-gallery-col gc-offset-col1">
                     <img src={food1} alt="Food bowl 1" className="gc-gallery-img" />
                     <img src={food2} alt="Food bowl 2" className="gc-gallery-img" />
@@ -214,7 +217,6 @@ export default function GiftCardSection() {
                     <img src={food4} alt="Food bowl 4" className="gc-gallery-img" />
                     </div>
 
-                    {/* Column 2 (Middle Column Shifted Vertically) */}
                     <div className="gc-gallery-col gc-offset-col2">
                     <img src={food5} alt="Food bowl 5" className="gc-gallery-img" />
                     <img src={food6} alt="Food bowl 6" className="gc-gallery-img" />
@@ -222,7 +224,6 @@ export default function GiftCardSection() {
                     <img src={food8} alt="Food bowl 8" className="gc-gallery-img" />
                     </div>
 
-                    {/* Column 3 */}
                     <div className="gc-gallery-col gc-offset-col3">
                     <img src={food9} alt="Food bowl 9" className="gc-gallery-img" />
                     <img src={food10} alt="Food bowl 10" className="gc-gallery-img" />

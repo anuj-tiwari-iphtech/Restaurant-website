@@ -136,3 +136,86 @@ export const menuData = {
       }
     ]
 };
+
+export const locationsData = [
+  {
+    id: 1,
+    name: "PokeBar Harbor Islands",
+    address: "Boston Harbor, 15 State Street, Suite 1100, Boston",
+    distance: "1 km",
+    time: "20 min",
+    selected: true,
+  },
+  {
+    id: 2,
+    name: "PokeBar Boylston St",
+    address: "827 Boylston St, Boston",
+    distance: "3.5 km",
+    time: "30 min",
+    selected: false,
+  },
+  {
+    id: 3,
+    name: "PokeBar Congress St",
+    address: "372 Congress St, Boston",
+    distance: "5 km",
+    time: "40 min",
+    selected: false,
+  },
+  {
+    id: 4,
+    name: "PokeBar Cambridge",
+    address: "487 Cambridge St, Allston, Boston",
+    distance: "6 km",
+    time: "45 min",
+    selected: false,
+  },
+  {
+    id: 5,
+    name: "PokeBar Seaport",
+    address: "60 Seaport Blvd, Boston",
+    distance: "2.2 km",
+    time: "25 min",
+    selected: false,
+  },
+  {
+    id: 6,
+    name: "PokeBar Newbury St",
+    address: "142 Newbury St, Boston",
+    distance: "4.1 km",
+    time: "35 min",
+    selected: false,
+  },
+  {
+    id: 7,
+    name: "PokeBar Fenway",
+    address: "1350 Boylston St, Boston",
+    distance: "4.8 km",
+    time: "38 min",
+    selected: false,
+  },
+  {
+    id: 8,
+    name: "PokeBar Beacon Hill",
+    address: "74 Charles St, Boston",
+    distance: "3.0 km",
+    time: "28 min",
+    selected: false,
+  },
+  {
+    id: 9,
+    name: "PokeBar South End",
+    address: "540 Tremont St, Boston",
+    distance: "3.8 km",
+    time: "32 min",
+    selected: false,
+  },
+  {
+    id: 10,
+    name: "PokeBar Financial District",
+    address: "100 Federal St, Boston",
+    distance: "1.8 km",
+    time: "22 min",
+    selected: false,
+  },
+];

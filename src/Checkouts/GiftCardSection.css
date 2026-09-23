@@ -5,22 +5,22 @@
     background-color: #ffffff;
     box-sizing: border-box;
     font-family: 'Nunito', 'Segoe UI', sans-serif;
-  }
+}
   
-  .gift-section-wrapper {
+.gift-section-wrapper {
     max-width: 1440px;
     width: 100%;
     display: flex;
     gap: 60px;
     align-items: flex-start;
-  }
+}
   
-  .gift-form-container {
+.gift-form-container {
     flex: 1;
     max-width: 520px;
     padding: 60px 20px;
     margin-left: 80px;
-  }
+}
   
   .gift-main-title {
     font-size: 32px;
@@ -124,7 +124,6 @@
     font-weight: 700;
   }
   
-  /* Custom Amount Input */
   .custom-amount-wrapper {
     display: flex;
     align-items: center;
