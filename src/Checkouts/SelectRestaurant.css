@@ -1,0 +1,251 @@
+.sr-wrapper {
+    display: flex;
+    max-width: 1100px;
+    margin: 40px auto;
+    gap: 32px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 0 16px;
+}
+  
+
+.sr-left-panel {
+    flex: 0 0 480px;
+    display: flex;
+    flex-direction: column;
+}
+  
+  
+.sr-toggle-container {
+    display: inline-flex;
+    background-color: #fceecb;
+    padding: 3px;
+    border-radius: 8px;
+    width: fit-content;
+    margin-bottom: 24px;
+}
+  
+.sr-toggle-btn {
+    border: none;
+    background: transparent;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+  
+.sr-toggle-btn.active {
+    background-color: #FCDD80FF;
+    color: #111;
+    font-weight: 400;
+}
+  
+
+.sr-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    margin: 0 0 16px 0;
+}
+  
+
+.sr-search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 8px 14px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+  
+.sr-search-icon {
+    color: #BCC1CAFF;
+    font-size: 16px;
+    margin-right: 8px;
+}
+  
+.sr-search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+    color: rgb(36, 38, 40);
+}
+
+.sr-search-box input::placeholder{
+    color: #BCC1CAFF;
+}
+  
+.sr-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 440px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+  
+.sr-card {
+    background-color: #f8fafc;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+  
+.sr-card.selected {
+    background-color: #ff6038;
+    color: #ffffff;
+}
+  
+.sr-card-header {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+  
+.sr-pin-icon {
+    font-size: 18px;
+    color: #64748b;
+    margin-top: 2px;
+}
+  
+.sr-pin-icon.active-pin {
+    color: #ffffff;
+}
+  
+.sr-card-title {
+    margin: 0 0 4px 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+  
+.sr-card.selected .sr-card-title {
+    color: #ffffff;
+}
+  
+.sr-card-address {
+    margin: 0;
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.4;
+}
+  
+.sr-card.selected .sr-card-address {
+    color: #ffe4de;
+}
+  
+.sr-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+  
+.sr-select-btn {
+    border: 1px solid #ff6038;
+    background: transparent;
+    color: #ff6038;
+    padding: 6px 28px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+  
+.sr-select-btn.active-btn {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #ff6038;
+}
+  
+.sr-distance {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 500;
+}
+  
+.sr-card.selected .sr-distance {
+    color: #ffffff;
+}
+
+
+.sr-right-panel {
+    flex: 1;
+}
+  
+.sr-map-wrapper {
+    width: 100%;
+    height: 590px;
+    border-radius: 28px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    background-color: #f1f5f9;
+}
+  
+
+.sr-map-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+  
+
+.sr-map-pin {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transform: translate(-50%, -50%); 
+}
+  
+.pin-active {
+    background-color: #ff6038;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 96, 56, 0.4);
+}
+  
+.pin-light {
+    background-color: #ffffff;
+    border: 1px solid #ff6038;
+    color: #ff6038;
+}
+  
+.sr-map-icon {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transform: translate(-50%, -50%);
+} 
+
+@media (max-width: 820px) {
+    .sr-wrapper {
+      flex-direction: column;
+    }
+  
+    .sr-left-panel {
+      flex: 1;
+      width: 100%;
+    }
+  
+    .sr-map-wrapper {
+      height: 350px;
+    }
+}
