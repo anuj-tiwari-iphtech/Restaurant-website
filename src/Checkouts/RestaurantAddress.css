@@ -1,0 +1,121 @@
+.rh-container {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 45px 48px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+  
+.rh-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+  
+.rh-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #111827;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.5px;
+}
+  
+.rh-details-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+}
+  
+.rh-info-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+  
+.rh-info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #374151;
+}
+  
+.rh-icon {
+    font-size: 18px;
+    color: #9ca3af;
+    flex-shrink: 0;
+}
+  
+.rh-info-item span{
+    font-size: 16px;
+}
+
+.rh-change-link {
+    background: none;
+    border: none;
+    color: #379AE6FF; 
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 6px;
+    font-weight: 500;
+}
+  
+.rh-change-link:hover {
+    color: #3730a3;
+}
+  
+.rh-toggle-container {
+    display: flex;
+    border: 1px solid #f3f4f6;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+  
+.rh-toggle-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    color: #4b5563;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+  
+.rh-toggle-btn.active {
+    background-color: #fde68a; 
+    color: #78350f;
+    font-weight: 500;
+}
+  
+@media (max-width: 768px) {
+    .rh-container {
+      padding: 20px 16px;
+    }
+  
+    .rh-title {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+  
+    .rh-details-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  
+    .rh-toggle-container {
+      width: 100%;
+    }
+  
+    .rh-toggle-btn {
+      flex: 1;
+    }
+}
