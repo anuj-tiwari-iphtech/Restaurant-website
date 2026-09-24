@@ -1,9 +1,10 @@
-import React from 'react';
 import FoodCard from '../components/FoodCard';
+import { useNavigate } from 'react-router-dom';
 import './SignatureBowls.css';
 
 export default function SignatureBowlsSection({data}) {
   const { sectionTitle, ctaText, bowls } = data;
+  const navigate = useNavigate()
 
   const handleOrder = (title) => {
     console.log(`Order clicked for: ${title}`);
@@ -11,6 +12,7 @@ export default function SignatureBowlsSection({data}) {
 
   const handleExploreMore = () => {
     console.log("Explore more clicked");
+    navigate('/menu')
   };
 
   return (

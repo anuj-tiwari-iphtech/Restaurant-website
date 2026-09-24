@@ -1,7 +1,7 @@
 
 .food-card-wrapper {
     width: 100%;
-    max-width: 270px;
+    width: 270px;
     position: relative;
     margin-top: 80px; 
     font-family: 'Nunito';
@@ -50,6 +50,19 @@
     line-height: 20px;
     color: #6b7280;
     margin: 0 0 20px 0;
+    min-height: 60px;
+  }
+
+  .menu-card-price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .menu-card-price h3{
+    margin-left: 10px;
   }
 
   .food-card-btn {

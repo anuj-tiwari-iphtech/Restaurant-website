@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FiSearch, FiMapPin } from 'react-icons/fi';
 import {locationsData} from '../data/menuData.js'
 import { FiShoppingCart } from "react-icons/fi";
@@ -9,11 +10,17 @@ import './SelectRestaurant.css'
 export default function SelectRestaurant() {
     const [orderType, setOrderType] = useState('delivery')
     const [searchQuery, setSearchQuery] = useState('')
-    const [selectedId, setSelectedId] = useState(1);
+    const [selectedId, setSelectedId] = useState();
+    const navigate = useNavigate();
 
     const filteredLocations = locationsData.filter((loc) => 
         loc.name.toLowerCase().includes(searchQuery.toLowerCase()) || loc.address.toLowerCase().includes(searchQuery.toLowerCase()) 
     )
+
+    const handleSelect = (loc) => {
+        setSelectedId(loc.id);
+        navigate('/checkout-menu', {state: {restaurant: loc}})
+    }
     return(
         <div className="sr-wrapper">
             <div className="sr-left-panel">
@@ -59,7 +66,10 @@ export default function SelectRestaurant() {
                                     </div>
 
                                     <div className="sr-card-footer">
-                                        <button className={`sr-select-btn ${isSelected ? 'active-btn' : ''}`}>
+                                        <button 
+                                        className={`sr-select-btn ${isSelected ? 'active-btn' : ''}`}
+                                        onClick={(e) => {e.stopPropagation(); handleSelect(loc)}}
+                                        >
                                             Select
                                         </button>
                                         <span className="sr-distance">

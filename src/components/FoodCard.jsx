@@ -2,7 +2,7 @@ import './FoodCard.css';
 
 export default function FoodCard({
   title,
-  ingredients ,
+  ingredients = [] ,
   image,
   onOrder
 }) {
