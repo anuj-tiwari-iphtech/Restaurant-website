@@ -4,7 +4,7 @@ export default function MenuCard({
   title,
   ingredients = [],
   image,
-  onAddtoCart,
+  onOrder,
   price,
 }) {
   return (
@@ -21,7 +21,7 @@ export default function MenuCard({
         </p>
         <div className='menu-card-price'>
           <h3>${price}</h3>
-          <button className="food-card-btn" onClick={onAddtoCart}>
+          <button className="food-card-btn" onClick={onOrder}>
             Add to cart
           </button>
         </div>

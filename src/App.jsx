@@ -12,6 +12,8 @@ import CheckoutMenu from './pages/CheckoutMenu'
 import Login from './Models/Login'
 import ReservationModal from './Models/Reservation'
 import './App.css'
+import CheckoutSection from './Checkouts/CheckoutSection'
+import OrderReview from './pages/OrderReview'
 
 function App() {
   const [showLogin, setShowLogin] = useState(false)
@@ -49,6 +51,7 @@ function App() {
         <Route path='/gift-card' element={<GiftCard/>}/>
         <Route path='/select-restaurant' element={<CheckoutRestaurant/>}/>
         <Route path='/checkout-menu' element={<CheckoutMenu/>}/>
+        <Route path='/checkout' element={<OrderReview/>}/>
       </Routes>
     <Footer/>
     </>

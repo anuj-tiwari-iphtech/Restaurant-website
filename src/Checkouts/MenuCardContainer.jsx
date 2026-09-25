@@ -1,12 +1,26 @@
+import { useState } from 'react';
 import MenuCard from './MenuCard';
+import BuildYourOwnBowl from '../Models/BuildYourOwnBowl';
 import '../Homepage/SignatureBowls.css'
 
 export default function MenuCardContainer({data, head}) {
   const { bowls } = data;
+  const [showBuildModal, setShowBuildModal] = useState(false);
+  const [selectedBowl, setSelectedBowl] = useState(null)
 
-  const handleOrder = (title) => {
-    console.log(`Order clicked for: ${title}`);
+  const handleOrder = (bowl) => {
+    if(bowl.isCustomizable){
+      setSelectedBowl(bowl);
+      setShowBuildModal(true);
+    }else{
+      console.log('Added to cart:',bowl.title);
+    }
   };
+
+  const closeModal = () => {
+    setShowBuildModal(false);
+    setSelectedBowl(null);
+  }
 
   return (
     <div>
@@ -26,7 +40,7 @@ export default function MenuCardContainer({data, head}) {
                     title={bowl.title}
                     ingredients={bowl.ingredients}
                     image={bowl.image}
-                    onOrder={() => handleOrder(bowl.title)}
+                    onOrder={() => handleOrder(bowl)}
                     price={bowl.price}
                     />
                 ))}
@@ -35,6 +49,10 @@ export default function MenuCardContainer({data, head}) {
             </div>
         </div>
     </section>
+
+    {showBuildModal && (
+      <BuildYourOwnBowl bowl={selectedBowl} onClose={closeModal}/>
+    )}
     </div>
   );
 }

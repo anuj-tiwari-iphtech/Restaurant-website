@@ -137,6 +137,76 @@ export const menuData = {
     ]
 };
 
+export const mightAlsoLike = {
+  bowls : [
+   {
+      id: 5,
+      title: "Dynamite Bowl",
+      image: img5,
+      price: 10,
+      ingredients: [
+        "Tuna*",
+        "Shrimp",
+        "Carrot",
+        "Mango",
+        "Jalapeno",
+        "Cucumber",
+        "Chili Flakes",
+        "Sesame Seeds",
+        "Jalapenoss"
+      ]
+    },
+    {
+      id: 6,
+      title: "The Duke Bowl",
+      image: img6,
+      price: 15,
+      ingredients: [
+        "Tuna*",
+        "Salmon",
+        "Shrimp",
+        "Seaweed Salad",
+        "Jalapeno",
+        "Sweet Onion",
+        "Edamame",
+        "Cucumber"
+      ]
+    },
+    {
+      id: 3,
+      title: "Volcano Bowl",
+      image: img3,
+      price: 16,
+      ingredients: [
+        "Spicy Salmon*",
+        "Spicy Tuna*",
+        "Green Onion",
+        "Cabbage",
+        "Cucumber",
+        "Carrot",
+        "Jalapeno",
+        "Ginger"
+      ]
+    },
+    {
+      id: 8,
+      title: "Salmon Bowl",
+      image: img8,
+      price: 18,
+      ingredients: [
+        "Spicy Salmon*",
+        "Green Onion",
+        "Avocado",
+        "Cucumber",
+        "Ginger",
+        "House Sauce mixed with light sriracha",
+        "Furikake",
+        "Lemon"
+      ]
+    }
+  ]
+}
+
 export const locationsData = [
   {
     id: 1,

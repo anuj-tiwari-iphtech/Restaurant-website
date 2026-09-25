@@ -16,7 +16,8 @@ export const menuData = {
             price: 20,
             ingredients: [
                 "Extra proteins for an additional charge."
-            ]
+            ],
+            isCustomizable: true
           },
           {
             id: 2,
@@ -141,7 +142,6 @@ import img11 from "../assets/CheckoutMenu/img3.jpg"
 import img12 from "../assets/CheckoutMenu/img4.jpg"
 
 export const drinksData = {
-    sectionTitle: "Drinks",
     bowls: [
       {
         id: 9,
