@@ -1,0 +1,307 @@
+
+.poke-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+  
+.poke-modal-card {
+    width: 816px;
+    height: 684px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+  
+.poke-header {
+    padding: 24px 32px 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+  
+  .poke-header-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .poke-thumb {
+    width: 72px;
+    height: 72px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .poke-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #111827;
+    margin: 0 0 6px 0;
+  }
+  
+  .poke-subtitle {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  .poke-close-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #4b5563;
+    cursor: pointer;
+    padding: 4px;
+  }
+  
+  .poke-close-btn:hover {
+    color: #111827;
+  }
+  
+  .poke-body {
+    flex: 1;
+    padding: 0 32px 24px 32px;
+    overflow-y: auto;
+  }
+  
+  .poke-step-section {
+    margin-top: 20px;
+  }
+  
+  .poke-step-tag {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 2px;
+  }
+  
+  .poke-step-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 16px 0;
+  }
+  
+  .poke-options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .poke-radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+    color: #374151;
+  }
+  
+  .poke-radio-input,
+  .poke-checkbox-input {
+    display: none;
+  }
+  
+  .poke-radio-custom {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  
+  .poke-radio-input:checked + .poke-radio-custom {
+    border-color: #ff5e3a;
+  }
+  
+  .poke-radio-input:checked + .poke-radio-custom::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #ff5e3a;
+    border-radius: 50%;
+  }
+  
+  .poke-checkbox-custom {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  
+  .poke-checkbox-input:checked + .poke-checkbox-custom {
+    border-color: #ff5e3a;
+    background-color: #ff5e3a;
+  }
+  
+  .poke-checkbox-input:checked + .poke-checkbox-custom::after {
+    content: '✓';
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .poke-option-text {
+    font-weight: 500;
+  }
+  
+  /* Footer Section */
+  .poke-footer {
+    padding: 16px 32px;
+    border-top: 1px solid #f3f4f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  
+  .poke-qty-picker {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .poke-qty-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .poke-qty-plus {
+    background-color: #ff5e3a;
+    color: #ffffff;
+  }
+  
+  .poke-qty-num {
+    font-weight: 600;
+    font-size: 15px;
+    color: #111827;
+  }
+  
+  .poke-add-cart-btn {
+    background-color: #84cc16; 
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  .poke-add-cart-btn:hover {
+    opacity: 0.9;
+  }
+
+
+@media (max-height: 720px) {
+    .poke-modal-card {
+      height: 90vh; 
+    }
+  }
+  
+  @media (max-width: 860px) {
+    .poke-modal-card {
+      width: 92%;
+      max-width: 816px;
+      height: 85vh;
+    }
+  
+    .poke-header {
+      padding: 20px 24px 12px 24px;
+    }
+  
+    .poke-body {
+      padding: 0 24px 20px 24px;
+    }
+  
+    .poke-footer {
+      padding: 14px 24px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .poke-overlay {
+      padding: 12px;
+    }
+  
+    .poke-modal-card {
+      width: 100%;
+      height: 94vh;
+      border-radius: 12px;
+    }
+  
+    .poke-header {
+      padding: 16px;
+    }
+  
+    .poke-thumb {
+      width: 56px;
+      height: 56px;
+    }
+  
+    .poke-title {
+      font-size: 18px;
+    }
+  
+    .poke-subtitle {
+      font-size: 12px;
+    }
+  
+    .poke-body {
+      padding: 0 16px 16px 16px;
+    }
+  
+    .poke-step-title {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+  
+    .poke-radio-label {
+      font-size: 14px;
+    }
+  
+    .poke-footer {
+      padding: 12px 16px;
+      gap: 12px;
+    }
+  
+    .poke-add-cart-btn {
+      padding: 10px 20px;
+      font-size: 14px;
+      flex: 1; 
+      text-align: center;
+    }
+  }
