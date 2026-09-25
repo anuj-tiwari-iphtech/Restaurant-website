@@ -1,0 +1,375 @@
+.checkout-container {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+  
+.checkout-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+  
+.order-summary-card {
+    flex: 2.6;
+    background-color: #ffffff;
+    border: 1px solid #f3f4f6;
+    border-radius: 12px;
+    padding: 28px 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+  
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 24px 0;
+}
+  
+  .items-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .item-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .item-details {
+    flex: 1;
+  }
+  
+  .item-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 6px 0;
+  }
+  
+  .item-ingredients {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  .item-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin-right: 32px;
+  }
+  
+  .item-actions {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .action-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s;
+  }
+  
+  .action-btn:hover {
+    color: #4b5563;
+  }
+  
+  /* Right Sidebar Card */
+  .payment-sidebar-card {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #f3f4f6;
+    border-radius: 12px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  }
+  
+  .sidebar-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 12px 0;
+  }
+  
+  .change-payment-link {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 12px;
+    cursor: pointer;
+  }
+  
+  .payment-card-badge {
+    background-color: #f4fce3; /* Soft green backdrop */
+    border: 1px solid #d8f5a2;
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .mastercard-img {
+    height: 20px;
+  }
+  
+  .card-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .card-digits {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1f2937;
+  }
+  
+  /* Voucher Styles */
+  .voucher-input-group {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .voucher-input {
+    flex: 1;
+    height: 40px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .voucher-input:focus {
+    border-color: #ff5e3a;
+  }
+  
+  .voucher-apply-btn {
+    background-color: #fef3c7;
+    border: none;
+    color: #78350f;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .applied-vouchers-list {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  
+  .voucher-chip {
+    background-color: #fef08a;
+    color: #854d0e;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .remove-voucher-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #854d0e;
+    padding: 0;
+  }
+  
+  /* Summary Rows */
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .summary-label {
+    color: #6b7280;
+  }
+  
+  .summary-value {
+    font-weight: 700;
+    color: #111827;
+  }
+  
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 16px;
+  }
+  
+  .total-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+  }
+  
+  .total-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ff5e3a;
+  }
+  
+  .proceed-btn {
+    width: 100%;
+    background-color: #ff5e3a;
+    color: #ffffff;
+    border: none;
+    height: 48px;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  .proceed-btn:hover {
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 900px) {
+    .checkout-container {
+      padding: 24px 16px;
+    }
+  
+    .checkout-layout {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .order-summary-card{
+        width: 100%;
+    }
+    .payment-sidebar-card {
+      width: 60%;
+    }
+  }
+  
+
+  @media (max-width: 600px) {
+    .checkout-container {
+      padding: 16px 12px;
+    }
+
+    .order-summary-card {
+      padding: 20px 16px;
+    }
+
+    .payment-sidebar-card {
+        width: 100%;
+    }
+  
+    .payment-sidebar-card {
+      padding: 20px 16px;
+      gap: 20px;
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      grid-template-rows: auto auto;
+      column-gap: 12px;
+      row-gap: 8px;
+      align-items: start;
+      padding: 16px 0;
+    }
+  
+    .item-img {
+      width: 48px;
+      height: 48px;
+      margin-right: 0;
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+  
+    .item-details {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+    }
+  
+    .item-name {
+      font-size: 14px;
+    }
+  
+    .item-ingredients {
+      font-size: 12px;
+    }
+  
+    .item-price {
+      font-size: 16px;
+      margin-right: 0;
+      grid-column: 3;
+      grid-row: 1;
+      text-align: right;
+    }
+  
+    .item-actions {
+      grid-column: 3;
+      grid-row: 2;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+  
+    .action-btn {
+      font-size: 16px;
+    }
+
+    .voucher-input-group {
+      flex-direction: row;
+    }
+  
+    .voucher-apply-btn {
+      padding: 0 16px;
+    }
+  }
