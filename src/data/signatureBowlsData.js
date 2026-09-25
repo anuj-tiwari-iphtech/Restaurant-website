@@ -12,6 +12,7 @@ export const signatureBowlsData = {
         id: 1,
         title: "California Crunch Bowl",
         image: img1,
+        price: 15,
         ingredients: [
           "Shrimp",
           "Crab",
@@ -29,6 +30,7 @@ export const signatureBowlsData = {
         id: 2,
         title: "Rainbow Bowl",
         image: img2,
+        price: 18,
         ingredients: [
           "Crab",
           "Salmon*",
@@ -44,6 +46,7 @@ export const signatureBowlsData = {
         id: 3,
         title: "Volcano Bowl",
         image: img3,
+        price: 17,
         ingredients: [
           "Spicy Salmon*",
           "Spicy Tuna*",
@@ -59,6 +62,7 @@ export const signatureBowlsData = {
         id: 4,
         title: "Tuna lover's Bowl",
         image: img4,
+        price: 19,
         ingredients: [
           "Tuna*",
           "Ground Spicy Tuna*",

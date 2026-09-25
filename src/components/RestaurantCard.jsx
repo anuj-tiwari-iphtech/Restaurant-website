@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiPhone } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl";
 import defaultImg from '../assets/location/img1.jpg';
@@ -11,6 +10,7 @@ export default function RestaurantCard({
   sunHours = "Sunday - 12:00 PM - 9:00 PM",
   phone = "(713) 814-7100",
   email = "pokebarharborislands@gmail.com",
+  activeType,
   onDeliveryClick,
   onPickupClick
 }) {
@@ -35,10 +35,16 @@ export default function RestaurantCard({
       </div>
 
       <div className="res-button-wrapper">
-        <button className="res-first-btn" onClick={onDeliveryClick}>
+        <button 
+          className={`res-first-btn ${activeType === 'delivery' ? 'active' : ''}`} 
+          onClick={onDeliveryClick}
+        >
           Delivery
         </button>
-        <button className="res-second-btn" onClick={onPickupClick}>
+        <button 
+          className={`res-second-btn ${activeType === 'pickup' ? 'active' : ''}`} 
+          onClick={onPickupClick}
+        >
           Pickup
         </button>
       </div>

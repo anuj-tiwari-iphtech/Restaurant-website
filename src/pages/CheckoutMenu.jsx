@@ -9,6 +9,7 @@ import RestaurantAddress from '../Checkouts/RestaurantAddress.jsx';
 export default function CheckoutMenu() {
   const location = useLocation();
   const restaurant = location.state?.restaurant;
+  const orderType = location.state?.orderType;
   const navigate = useNavigate()
   return (
     <>
@@ -17,6 +18,7 @@ export default function CheckoutMenu() {
           name={restaurant?.name || "Select a restaurant"} 
           address={restaurant?.address || "No location selected"}
           onChangeLocation={() => navigate('/select-restaurant')}
+          initialOrderType={orderType || 'delivery'}
         />
         <MenuCardContainer data={menuData} head="Menu"/>
         <MenuCardContainer data={drinksData} head="Drinks"/>

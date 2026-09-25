@@ -1,33 +1,18 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FiEdit2, FiTrash2 } from 'react-icons/fi';
+import { useCart } from '../Contexts/CartContext';
 import mastercard from '../assets/mastercard.png'
-import first from '../assets/Homepage/SignatureBowls/first.jpg'
-import second from '../assets/Homepage/SignatureBowls/second.jpg'
-
 import './CheckoutSection.css'
 
-const cartItems = [
-    {
-      id: 1,
-      name: 'Build Your Own Poke Bowl',
-      ingredients: 'Tuna* • Ground Spicy Tuna* • Avocado...',
-      price: 25,
-      image: first,
-    },
-    {
-      id: 2,
-      name: 'California Crunch Bowl',
-      ingredients: 'Shrimp • Crab • Cucumber • Green Onio...',
-      price: 9,
-      image: second,
-    },
-];
-
 export default function CheckoutSection() {
+    const {cartItems, removeFromCart, updateQuantity, subtotal} = useCart()
+    const navigate = useNavigate();
+
     const [voucherCode, setVoucherCode] = useState('freeship')
     const [appliedVouchers, setAppliedVoucher] = useState(['freeship'])
 
-    const subtotal = cartItems.reduce((acc, item) => acc + item.price, 0);
+    // const subtotal = cartItems.reduce((acc, item) => acc + item.price, 0);
     const shipping =  0
     const fee = 0
     const total = subtotal + shipping + fee
@@ -43,30 +28,44 @@ export default function CheckoutSection() {
         setAppliedVoucher(appliedVouchers.filter((v) => v!==code));
     }
 
+    const handleClick = () => {
+        navigate('/payment')
+    }
+
   return (
     <div className='checkout-container'>
         <div className='checkout-layout'>
             <div className='order-summary-card'>
                 <h2 className='card-title'>  Order Summary </h2>
                 <div className='items-list'>
-                    {cartItems.map((item) => (
-                        <div key={item.id} className='cart-item'>
-                            <img src={item.image} alt={item.name} className='item-img'/>
-                            <div className='item-details'>
-                                <h3 className='item-name'>{item.name}</h3>
-                                <p className='item-ingredients'>{item.ingredients}</p>
+                {cartItems.length === 0 ? (
+                    <p>Your cart is empty.</p>
+                    ) : (
+                        cartItems.map((item) => (
+                            <div key={item.cartItemId || item.id} className="cart-item">
+                                <img src={item.image} alt={item.name} className="item-img" />
+                                <div className="item-details">
+                                    <h3 className="item-name">{item.name}</h3>
+                                    <p className="item-ingredients">{item.ingredients}</p>
+                                    <div className="qty-controls">
+                                        <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
+                                        <span>{item.quantity}</span>
+                                        <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                                    </div>
+                                </div>
+                            <div className="item-price">${item.price * item.quantity}</div>
+                                <div className="item-actions">
+                                    <button 
+                                    type="button" 
+                                    className="action-btn" 
+                                    onClick={() => removeFromCart(item.id)}
+                                    >
+                                    <FiTrash2 />
+                                    </button>
+                                </div>
                             </div>
-                            <div className='item-price'>${item.price}</div>
-                            <div className='item-actions'>
-                                <button type='button' className='action-btn'>
-                                    <FiEdit2/>
-                                </button>
-                                <button type='button' className='action-btn'>
-                                    <FiTrash2/>
-                                </button>
-                            </div>
-                        </div>
-                    ))}
+                        ))
+                    )}
                 </div>
             </div>
 
@@ -138,7 +137,7 @@ export default function CheckoutSection() {
                     <span className='total-value'>${total}</span>
                 </div>
 
-                <button type='button' className='proceed-btn'>
+                <button type='button' className='proceed-btn' onClick={handleClick} disabled={cartItems.length === 0}>
                     Proceed to payment
                 </button>
 

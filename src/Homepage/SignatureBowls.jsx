@@ -1,13 +1,24 @@
 import FoodCard from '../components/FoodCard';
 import { useNavigate } from 'react-router-dom';
+import { useCart } from '../Contexts/CartContext';
 import './SignatureBowls.css';
 
 export default function SignatureBowlsSection({data}) {
   const { sectionTitle, ctaText, bowls } = data;
   const navigate = useNavigate()
+  const {addToCart} = useCart();
 
-  const handleOrder = (title) => {
-    console.log(`Order clicked for: ${title}`);
+  const handleOrder = (bowl) => {
+    addToCart({
+      id: bowl.id,
+      name: bowl.title,
+      ingredients: bowl.ingredients,
+      image: bowl.image,
+      price: bowl.price,
+      quantity: 1,
+      options: bowl.options || {},
+    })
+    navigate('/checkout')
   };
 
   const handleExploreMore = () => {
@@ -27,7 +38,8 @@ export default function SignatureBowlsSection({data}) {
               title={bowl.title}
               ingredients={bowl.ingredients}
               image={bowl.image}
-              onOrder={() => handleOrder(bowl.title)}
+              price={bowl.price}
+              onOrder={() => handleOrder(bowl)}
             />
           ))}
         </div>

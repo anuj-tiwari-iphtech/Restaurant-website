@@ -1,14 +1,21 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import RestaurantCard from '../components/RestaurantCard';
 import { locationsData } from '../data/resturantData.js'
 import './LocationSection.css';
 
 export default function LocationsSection() {
-  const handleDelivery = (address) => {
-    console.log(`Delivery clicked for: ${address}`);
+  const navigate = useNavigate()
+  const [selected, setSelected] = useState({ id: null, type: null });
+
+  const handleDelivery = (location) => {
+    setSelected({ id: location.id, type: 'delivery' });
+    navigate('/checkout-menu', { state: { restaurant: location , orderType: 'delivery' } });
   };
 
-  const handlePickup = (address) => {
-    console.log(`Pickup clicked for: ${address}`);
+  const handlePickup = (location) => {
+    setSelected({ id: location.id, type: 'pickup' });
+    navigate('/checkout-menu', { state: { restaurant: location, orderType: 'pickup' } });
   };
 
   return (
@@ -26,8 +33,9 @@ export default function LocationsSection() {
               sunHours={location.sunHours}
               phone={location.phone}
               email={location.email}
-              onDeliveryClick={() => handleDelivery(location.address)}
-              onPickupClick={() => handlePickup(location.address)}
+              activeType={selected.id === location.id ? selected.type : null}
+              onDeliveryClick={() => handleDelivery(location)}
+              onPickupClick={() => handlePickup(location)}
             />
           ))}
         </div>

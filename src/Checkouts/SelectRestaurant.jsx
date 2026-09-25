@@ -19,7 +19,7 @@ export default function SelectRestaurant() {
 
     const handleSelect = (loc) => {
         setSelectedId(loc.id);
-        navigate('/checkout-menu', {state: {restaurant: loc}})
+        navigate('/checkout-menu', {state: {restaurant: loc, orderType: orderType}})
     }
     return(
         <div className="sr-wrapper">

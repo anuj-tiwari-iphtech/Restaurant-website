@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { FiMapPin, FiClock } from 'react-icons/fi';
 import './RestaurantAddress.css';
 
-export default function RestaurantAddress({ name,address,onChangeLocation }) {
-  const [orderType, setOrderType] = useState('delivery');
+export default function RestaurantAddress({ name,address,onChangeLocation,initialOrderType = 'delivery' }) {
+  const [orderType, setOrderType] = useState(initialOrderType);
 
   return (
     <header className="rh-container">

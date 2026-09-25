@@ -8,6 +8,7 @@ import img6 from '../assets/location/img6.jpg';
 export const locationsData = [
   {
     id: 1,
+    name: "PokeBar Harbor Islands",
     image: img1,
     address: "Boston Harbor Islands, 15 State Street, Suite 1100, Boston",
     monSatHours: "Monday - Saturday 10:30 AM - 9:00 PM",
@@ -17,6 +18,7 @@ export const locationsData = [
   },
   {
     id: 2,
+    name: "PokeBar Boylston",
     image: img2,
     address: "827 Boylston St, Boston",
     monSatHours: "Monday - Saturday 10:30 AM - 9:00 PM",
@@ -26,6 +28,7 @@ export const locationsData = [
   },
   {
     id: 3,
+    name: "PokeBar Congress",
     image: img3,
     address: "372 Congress St, Boston",
     monSatHours: "Monday - Saturday 10:30 AM - 9:00 PM",
@@ -35,6 +38,7 @@ export const locationsData = [
   },
   {
     id: 4,
+    name: "PokeBar Kendall Square",
     image: img4,
     address: "1 Kendall Square, Boston",
     monSatHours: "Monday - Saturday 10:30 AM - 9:00 PM",
@@ -44,6 +48,7 @@ export const locationsData = [
   },
   {
     id: 5,
+    name: "PokeBar Cambridge",
     image: img5,
     address: "487 Cambridge St, Allston, Boston",
     monSatHours: "Monday - Saturday 10:30 AM - 9:00 PM",
@@ -53,6 +58,7 @@ export const locationsData = [
   },
   {
     id: 6,
+    name: "PokeBar Haviland",
     image: img6,
     address: "1 Haviland St, Boston, MA 02115",
     monSatHours: "Monday - Saturday 10:30 AM - 9:00 PM",
